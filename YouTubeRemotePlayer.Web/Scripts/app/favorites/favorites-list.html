@@ -1,0 +1,27 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <div class="favorites-div section h2">
+            My Favorites Videos
+        </div>
+        <ul class="video-results">
+            <li ng-repeat="video in videos">
+                {{video.snippet.title}}
+                <div>
+                    <img ng-src="{{video.snippet.thumbnails.high.url}}">
+                </div>
+                <p>
+            </li>
+        </ul>
+
+        <div class="pagination-div" ng-show="videos.length">
+            <p>Total number of favorites: {{favorites.totalCount}} [Page {{currentPage + 1}}]</p>
+
+            <button class="btn btn-primary" ng-disabled="!currentPage" ng-click="getPage(currentPage - 1)">
+                Prev Page
+            </button>
+            <button class="btn btn-primary" ng-disabled="!videos.length" ng-click="getPage(currentPage + 1)">
+                Next Page
+            </button>
+        </div>
+    </div>
+</div>

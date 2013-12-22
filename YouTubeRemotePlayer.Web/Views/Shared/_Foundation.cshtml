@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en" id="ytRemotePlayerApp" ng-app="ytRemotePlayerApp">
+<head>
+    <meta charset="utf-8" />
+
+    @*Set the viewport width to device width for mobile *@
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("head", required: false)
+</head>
+<body>
+
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/foundation")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/signalR")
+    @Scripts.Render("~/bundles/app")
+    <script src="/signalr/hubs"></script>
+
+    <script>
+        $(document).foundation();
+    </script>
+
+    @*Use the Scripts section to define page specific scripts*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<div class="row collapse">
+    <div class="small-10 columns">
+        <input type="text" id="searchText" ng-model="query" ng-disabled="!isEnabled" placeholder="Search for Videos">
+    </div>
+    <div class="small-2 columns">
+        <a href="" class="button postfix" id="searchBtn" ng-disabled="!isEnabled" ng-click="doSearch()">Go</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <ul>
+            <li ng-repeat="video in videos">
+                {{video.snippet.title}}
+                <div>
+                    <img ng-src="{{video.snippet.thumbnails.high.url}}">
+                </div>
+                <p>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="large-12 columns" ng-show="videos.length">
+            <div class="pagination-centered">
+                <ul class="pagination">
+                    <li><a href="" class="small button" ng-disabled="!currentPage" ng-click="doSearch(prevPageToken, currentPage - 1)">&laquo;</a></li>
+                    <li><a href="" class="small button" ng-disabled="!videos.length" ng-click="doSearch(nextPageToken, currentPage + 1)">&raquo;</a></li>
+                </ul>
+            </div>
+
+            <div class="panel callout radius">
+                Total number of videos: {{videos.length}}/{{pageInfo.totalResults}} [Page {{currentPage + 1}}]
+            </div>
+        </div>
+    </div>
+</div>
