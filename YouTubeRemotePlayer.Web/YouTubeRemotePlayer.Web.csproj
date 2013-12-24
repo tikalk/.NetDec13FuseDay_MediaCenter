@@ -581,6 +581,7 @@
     <Content Include="Content\Sass\_normalize.scss" />
     <Content Include="Content\Sass\_foundation.scss" />
     <Content Include="Content\Sass\_foundation.mvc.scss" />
+    <None Include="Properties\PublishProfiles\FS publish profile.pubxml" />
     <None Include="Scripts\libs\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.0.3.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.0.3.min.js" />
