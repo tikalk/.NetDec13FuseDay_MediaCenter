@@ -1,0 +1,30 @@
+<html ng-app="phonecatApp">
+<head>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/controller.js"></script>
+    <title>PhoneCatApp</title>
+</head>
+<script>
+function startVideo(){
+	JBridge.start("WLOSnLmaQpU");
+}
+function playLoaded(videoID){
+	Toaster.showToast("Video " + videoID + " loaded");
+}
+function playVideo(){
+	JBridge.play();
+}
+function pauseVideo(){
+	JBridge.pause();
+}
+function stopVideo(){
+	JBridge.stop();
+}
+</script>
+<body ng-controller="PhoneListCtrl">
+    <button onclick=startVideo()>start</button>
+    <button onclick=playVideo()>play</button>
+    <button onclick=stopVideo()>stop</button>
+    <button onclick=pauseVideo()>pause</button>
+</body>
+</html>
