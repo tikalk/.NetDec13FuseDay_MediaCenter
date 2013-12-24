@@ -16,6 +16,10 @@ ytRemotePlayerApp.config(['$routeProvider', '$locationProvider',
             templateUrl: '../Scripts/app/favorites/favorites-list.html',
             controller: 'FavoritesCtrl'
         }).
+        when('/player', {
+            templateUrl: '../Scripts/app/player/yt-player.html',
+            controller: 'PlayerCtrl'
+        }).
         otherwise({
             redirectTo: '/search'
         });

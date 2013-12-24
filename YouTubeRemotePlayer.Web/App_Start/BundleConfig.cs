@@ -62,6 +62,7 @@ namespace YouTubeRemotePlayer.Web
                         "~/Scripts/app/services/*.js",
                         "~/Scripts/app/common/*.js",
                         "~/Scripts/app/favorites/*.js",
+                        "~/Scripts/app/player/*.js",
                          "~/Scripts/app/search/*.js"));
 
             #endregion
