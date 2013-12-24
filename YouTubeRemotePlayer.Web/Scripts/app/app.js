@@ -2,6 +2,7 @@
   'ngRoute',
   'searchControllers',
   'favoritesControllers',
+  'playerControllers',
   'youtube'
 ]);
 
