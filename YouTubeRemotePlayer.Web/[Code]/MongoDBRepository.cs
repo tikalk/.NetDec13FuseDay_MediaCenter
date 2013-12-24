@@ -76,6 +76,11 @@ namespace YouTubeRemotePlayer.Web
             return _favoriteCollection.Count();
         }
 
+        public IList<Favorite> FavoritesGetAll()
+        {
+            return _favoriteCollection.FindAll().ToList();
+        }
+
         public bool Persist()
         {
             return false;

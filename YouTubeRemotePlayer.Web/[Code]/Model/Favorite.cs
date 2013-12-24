@@ -19,6 +19,10 @@ namespace YouTubeRemotePlayer.Web.Model
         [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
 
+        [BsonElement("title")]
+        [JsonProperty(PropertyName = "title")]
+        public string Title { get; set; }
+
         [BsonElement("creationDate")]
         [JsonProperty(PropertyName = "creationDate")]
         public DateTime CreationDate { get; set; }

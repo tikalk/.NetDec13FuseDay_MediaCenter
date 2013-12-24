@@ -28,6 +28,10 @@ searchControllers.controller('SearchCtrl', ['$scope', '$http', '$rootScope', 're
           });
       };
 
+      $scope.addToFavorite = function (videoId, title) {
+          $http.post('/favorites/add', { videoId: videoId, title: title }).success(function (data) { alert('Added to favorites'); });
+      };
+
       $rootScope.$on("ytApiLoaded", function (args) {
           $scope.$apply(function () {
               $scope.isEnabled = true;

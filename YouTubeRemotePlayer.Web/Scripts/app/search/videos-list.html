@@ -1,4 +1,8 @@
-﻿<div class="row collapse">
+﻿<div class="row">
+    <a target="_blank" href="/#/player">Open Player</a>
+    <a target="_blank" href="/#/favorites">Open Favorites</a>
+</div>
+<div class="row collapse">
     <div class="small-10 columns">
         <input type="text" id="searchText" ng-model="query" ng-disabled="!isEnabled" placeholder="Search for Videos">
     </div>
@@ -12,6 +16,9 @@
         <ul>
             <li ng-repeat="video in videos">
                 {{video.snippet.title}}
+                <div>
+                    <a href="javascript:void(0);" class="button postfix" ng-click="addToFavorite(video.id.videoId, video.snippet.title)">Add To Favorites</a>
+                </div>
                 <div>
                     <!--<img ng-src="{{video.snippet.thumbnails.high.url}}">-->
                     <div youtube-player id="{{$index}}" video-id="{{video.id.videoId}}"></div>

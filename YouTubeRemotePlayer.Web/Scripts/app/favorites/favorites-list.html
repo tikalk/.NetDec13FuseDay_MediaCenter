@@ -5,11 +5,14 @@
         </div>
         <ul class="video-results">
             <li ng-repeat="video in videos">
-                {{video.snippet.title}}
+                {{video.title}}
                 <div>
-                    <img ng-src="{{video.snippet.thumbnails.high.url}}">
+                    <a href="javascript:void(0);" class="button postfix" ng-click="removeFromFavorite(video.videoId)">Remove From Favorites</a>
                 </div>
-                <p>
+                <div>
+                    <!--<img ng-src="{{video.snippet.thumbnails.high.url}}">-->
+                    <div youtube-player id="{{$index}}" video-id="{{video.videoId}}"></div>
+                </div>
             </li>
         </ul>
 
