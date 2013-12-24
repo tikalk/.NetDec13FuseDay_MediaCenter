@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,8 @@ namespace YouTubeRemotePlayer.Web
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
+        public static IUnityContainer unityContainer;
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -18,6 +21,9 @@ namespace YouTubeRemotePlayer.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //UnityContainer unityContainer = new UnityContainer();
+            //UnityConfig.RegisterTypes(unityContainer);
         }
     }
 }
