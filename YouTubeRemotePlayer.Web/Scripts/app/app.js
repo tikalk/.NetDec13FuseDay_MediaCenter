@@ -1,7 +1,8 @@
 ﻿var ytRemotePlayerApp = angular.module('ytRemotePlayerApp', [
   'ngRoute',
   'searchControllers',
-  'favoritesControllers'
+  'favoritesControllers',
+  'youtube'
 ]);
 
 ytRemotePlayerApp.config(['$routeProvider', '$locationProvider',
@@ -41,5 +42,4 @@ ytRemotePlayerApp.config(['$routeProvider', '$locationProvider',
             });
         }
     }]);
-
 

@@ -13,7 +13,8 @@
             <li ng-repeat="video in videos">
                 {{video.snippet.title}}
                 <div>
-                    <img ng-src="{{video.snippet.thumbnails.high.url}}">
+                    <!--<img ng-src="{{video.snippet.thumbnails.high.url}}">-->
+                    <div youtube-player id="{{$index}}" video-id="{{video.id.videoId}}"></div>
                 </div>
                 <p>
             </li>

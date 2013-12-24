@@ -207,6 +207,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\favorites\favorites-list.html" />
     <Content Include="Scripts\app\favorites\favoritesCtrl.js" />
+    <Content Include="Scripts\app\search\player.js" />
     <Content Include="Scripts\app\search\searchCtrl.js" />
     <Content Include="Scripts\app\search\videos-list.html" />
     <Content Include="Scripts\app\services\remotePlayerService.js" />
