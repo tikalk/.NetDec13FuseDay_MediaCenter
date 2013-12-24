@@ -4,24 +4,13 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
-import android.os.Build;
-import android.os.Bundle;
-import android.webkit.JavascriptInterface;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.widget.TextView;
-import android.widget.Toast;
+
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -82,8 +71,6 @@ OnInitializedListener, RemotePlayerListener {
 		public void pause() {
 			listener.pause();
 		}
-
-
 	}
 
 	@Override
@@ -126,21 +113,33 @@ OnInitializedListener, RemotePlayerListener {
 	@Override
 	public STATUS stop() {
 		player.pause();
+				AlphaAnimation alphaAnimation = new AlphaAnimation(1,0);
+	alphaAnimation.setDuration(3000);
+	alphaAnimation.setFillAfter(true);
+	playerView.startAnimation(alphaAnimation);
 		return STATUS.SUCCESS;
 	}
 
 	@Override
 	public STATUS pause() {
 		player.pause();
+	AlphaAnimation alphaAnimation = new AlphaAnimation(1,0);
+	alphaAnimation.setDuration(3000);
+	alphaAnimation.setFillAfter(true);
+	playerView.startAnimation(alphaAnimation);
 		return STATUS.SUCCESS;
 	}
 
 	@Override
 	public STATUS play() {
 		player.play();
-
+		AlphaAnimation alphaAnimation = new AlphaAnimation(0,1);
+		alphaAnimation.setDuration(3000);
+		alphaAnimation.setFillAfter(true);
+		playerView.startAnimation(alphaAnimation);
 		return STATUS.SUCCESS;
 	}
+
 
 	@Override
 	public STATUS seak(int seekTo) {
@@ -218,6 +217,10 @@ OnInitializedListener, RemotePlayerListener {
 		public void onLoaded(String arg0) {
 
 			//start animation
+			AlphaAnimation alphaAnimation = new AlphaAnimation(0,1);
+			alphaAnimation.setDuration(3000);
+			alphaAnimation.setFillAfter(true);
+			playerView.startAnimation(alphaAnimation);
 			player.play();
 			if (videoCallback != null){
 				videoCallback.onVideoLoaded(videoId);
