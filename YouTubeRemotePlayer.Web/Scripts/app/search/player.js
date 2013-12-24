@@ -53,7 +53,7 @@ angular.module('youtube', ['ng']).run(function () {
                 case YT.PlayerState.ENDED:
                     break;
                 case YT.PlayerState.PLAYING:
-                   // serverProxy.SendPlayCommand(event.target.k.videoData.video_id);
+                    serverProxy.sendPlayCommand(event.target.k.videoData.video_id, null);
                     break;
                 case YT.PlayerState.PAUSED:
                     break;
