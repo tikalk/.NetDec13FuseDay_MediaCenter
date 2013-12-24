@@ -1,6 +1,4 @@
-﻿var searchControllers = angular.module('searchControllers', []);
-
-searchControllers.controller('SearchCtrl', ['$scope', '$http', '$rootScope', 'remotePlayerService',
+﻿ytRemotePlayerApp.controller('SearchCtrl', ['$scope', '$http', '$rootScope', 'remotePlayerService',
   function ($scope, $http, $rootScope, remotePlayerService) {
       var serverProxy = remotePlayerService.getServerProxy();
 

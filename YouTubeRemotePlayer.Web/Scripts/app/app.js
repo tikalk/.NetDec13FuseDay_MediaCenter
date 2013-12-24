@@ -1,7 +1,5 @@
 ﻿var ytRemotePlayerApp = angular.module('ytRemotePlayerApp', [
   'ngRoute',
-  'searchControllers',
-  'playerControllers',
   'youtube'
 ]);
 
