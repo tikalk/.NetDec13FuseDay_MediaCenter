@@ -203,6 +203,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\Css\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\favorites\favorites-list.html" />
@@ -559,6 +560,7 @@
     <Content Include="Content\Sass\_normalize.scss" />
     <Content Include="Content\Sass\_foundation.scss" />
     <Content Include="Content\Sass\_foundation.mvc.scss" />
+    <None Include="Properties\PublishProfiles\test publish.pubxml" />
     <None Include="Scripts\libs\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.0.3.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.0.3.min.js" />
@@ -586,7 +588,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Css\" />
     <Folder Include="Content\Images\" />
     <Folder Include="Scripts\app\common\" />
   </ItemGroup>

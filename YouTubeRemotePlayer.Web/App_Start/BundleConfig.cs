@@ -26,7 +26,7 @@ namespace YouTubeRemotePlayer.Web
 
             #region Css
 
-            bundles.Add(new StyleBundle("~/Content/Css").Include(
+            bundles.Add(new StyleBundle("~/bundles/Css").Include(
                       "~/Content/Css/*.css"));
 
             #endregion
@@ -50,8 +50,7 @@ namespace YouTubeRemotePlayer.Web
 
             bundles.Add(new ScriptBundle("~/bundles/foundation").Include(
                       "~/Scripts/libs/foundation/foundation.js",
-                      "~/Scripts/libs/foundation/foundation.*",
-                      "~/Scripts/libs/foundation/app.js"));
+                      "~/Scripts/libs/foundation/foundation.*"));
 
             #endregion
 
