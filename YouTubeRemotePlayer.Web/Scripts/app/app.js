@@ -2,6 +2,7 @@
   'ngRoute',
   'searchControllers',
   'favoritesControllers',
+  'playerControllers',
   'youtube'
 ]);
 
@@ -15,6 +16,10 @@ ytRemotePlayerApp.config(['$routeProvider', '$locationProvider',
         when('/favorites', {
             templateUrl: '../Scripts/app/favorites/favorites-list.html',
             controller: 'FavoritesCtrl'
+        }).
+        when('/player', {
+            templateUrl: '../Scripts/app/player/yt-player.html',
+            controller: 'PlayerCtrl'
         }).
         otherwise({
             redirectTo: '/search'

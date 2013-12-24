@@ -8,7 +8,9 @@ playerControllers.controller('PlayerCtrl', ['$scope', '$http', '$rootScope', 're
       client.receivePlayCommand = function (videoId) {
           console.log('receivePlayCommand ' + videoId);
 
-          JBridge.start(videoId);
+          if (window.JBridge) {
+              window.JBridge.start(videoId);
+          }
       };
       
   }]);
