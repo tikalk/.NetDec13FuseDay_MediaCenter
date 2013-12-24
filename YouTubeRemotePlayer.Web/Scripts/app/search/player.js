@@ -49,13 +49,14 @@ angular.module('youtube', ['ng']).run(function () {
         };
 
         service.onPlayerStateChange = function (event) {
+            var v_id = event.target.k.videoData.video_id;
             switch (event.data) {
-                case YT.PlayerState.ENDED:
-                    break;
                 case YT.PlayerState.PLAYING:
-                    serverProxy.sendPlayCommand(event.target.k.videoData.video_id, null);
+                    serverProxy.sendPlayCommand(v_id, null);
                     break;
+                case YT.PlayerState.ENDED:
                 case YT.PlayerState.PAUSED:
+                    serverProxy.sendPauseCommand(v_id, null);
                     break;
                 case YT.PlayerState.BUFFERING:
                     break;
