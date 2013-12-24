@@ -52,7 +52,7 @@ namespace YouTubeRemotePlayer.Web
                 var fav = GetFavoriteById(id);
                 if (fav!=null)
                 {
-                    _favoriteCollection.Remove(Query.EQ("Id",id));
+                    _favoriteCollection.Remove(Query.EQ("_id",id));
                     //_favoriteCollection.Save(_database);
                     return true;
                 }
@@ -64,6 +64,16 @@ namespace YouTubeRemotePlayer.Web
 
             }
             return false;
+        }
+
+        public long FavoriteCountByUserId(string userId)
+        {
+            return _favoriteCollection.Count(Query.EQ("userId", userId));
+        }
+
+        public long FavoriteCount()
+        {
+            return _favoriteCollection.Count();
         }
 
         public bool Persist()

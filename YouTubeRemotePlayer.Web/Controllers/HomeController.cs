@@ -16,19 +16,37 @@ namespace YouTubeRemotePlayer.Web.Controllers
             _mongoRepository = mongoRepositiry;
         }
 
-        private void MongoABTesting()
+        private void MongoInsertABTesting()
         {
-            _mongoRepository.AddFavorite(new Model.Favorite() { Id = "Test" });
-            var aaa = _mongoRepository.GetFavoriteById("Test");
-            _mongoRepository.RemoveFavoriteById("Test");
-            _mongoRepository.RemoveFavoriteById("1");
+            _mongoRepository.AddFavorite(new Model.Favorite() { Id = "Test", UserId="ofirYaron" });
+            _mongoRepository.AddFavorite(new Model.Favorite() { Id = "Test2", UserId = "dandan" });
+            _mongoRepository.AddFavorite(new Model.Favorite() { Id = "Test3", UserId = "ofek" });
+        }
 
-            var bbb = _mongoRepository.GetFavoriteById("Test");
+        private void MongoRemoveABTesting()
+        {
+            _mongoRepository.RemoveFavoriteById("Test");
+            _mongoRepository.RemoveFavoriteById("Test2");
+            _mongoRepository.RemoveFavoriteById("Test3");
+        }
+
+        private long MongoCollectionCount()
+        {
+            return _mongoRepository.FavoriteCountByUserId("ofirYaron");
+        }
+
+        private void MongoAB()
+        {
+            MongoInsertABTesting();
+            long a = MongoCollectionCount();
+            MongoRemoveABTesting();
+            long b = MongoCollectionCount();
         }
 
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
+            //MongoAB();
 
             return View();
         }

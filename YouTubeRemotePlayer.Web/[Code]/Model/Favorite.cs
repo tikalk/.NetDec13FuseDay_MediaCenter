@@ -12,12 +12,15 @@ namespace YouTubeRemotePlayer.Web.Model
     {
         [BsonId]
         [BsonRepresentation(BsonType.String)]
+        [JsonProperty(PropertyName = "id")]
         public string Id { get; set; }
 
         [BsonElement("userId")]
+        [JsonProperty(PropertyName = "userId")]
         public string UserId { get; set; }
 
         [BsonElement("creationDate")]
+        [JsonProperty(PropertyName = "creationDate")]
         public DateTime CreationDate { get; set; }
     }
 }
