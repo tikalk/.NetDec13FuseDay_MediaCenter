@@ -229,6 +229,8 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\app\favorites\favorites-list.html" />
     <Content Include="Scripts\app\favorites\favoritesCtrl.js" />
+    <Content Include="Scripts\app\player\PlayerCtrl.js" />
+    <Content Include="Scripts\app\player\yt-player.html" />
     <Content Include="Scripts\app\search\player.js" />
     <Content Include="Scripts\app\search\searchCtrl.js" />
     <Content Include="Scripts\app\search\videos-list.html" />
@@ -579,6 +581,7 @@
     <Content Include="Content\Sass\_normalize.scss" />
     <Content Include="Content\Sass\_foundation.scss" />
     <Content Include="Content\Sass\_foundation.mvc.scss" />
+    <None Include="Properties\PublishProfiles\FS publish profile.pubxml" />
     <None Include="Scripts\libs\jquery\jquery-2.0.3.intellisense.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.0.3.js" />
     <Content Include="Scripts\libs\jquery\jquery-2.0.3.min.js" />
